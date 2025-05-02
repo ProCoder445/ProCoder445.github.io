@@ -31,7 +31,7 @@ function jump() {
 
 	if(position.y + size.height >= canvas.height) {
 		acceleration.y = 0;
-		position.y = canvas.height - size.height;;
+		position.y = canvas.height - size.height;
 	} else acceleration.y += gravity
 	
 
@@ -74,7 +74,6 @@ window.addEventListener("keydown", (event) => {
 	switch(event.key) {
 	case "ArrowUp":
 		acceleration.y = -20;
-		keyPressed = true;
 		break;
 
 	}
@@ -98,18 +97,6 @@ window.addEventListener("keyup", (event) => {
 	}
 
 	console.log(acceleration);
-});
-
-
-
-
-window.addEventListener("keyup", (event) => {
-	console.log(event.key);
-	switch(event.key) {
-
-	case "ArrowUp":
-		keyPressed = false;
-	}
 });
 
 
