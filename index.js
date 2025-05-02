@@ -2,23 +2,23 @@ const canvas = document.querySelector("canvas");
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
 const context = canvas.getContext("2d");
-
-let position = {
-	x: 0,
-	y: canvas.height - 100
-}
-
-let size = {
+var size = {
 	width: 100,
 	height: 100
-}
+};
 
-let acceleration = {
+
+var position = {
+	x: 0,
+	y: canvas.height - size.width
+};
+
+
+var acceleration = {
 	x: 0,
 	y: 0
-}
+};
 
-let keyPressed = false;
 
 
 
@@ -42,8 +42,12 @@ function animate() {
 	context.clearRect(0, 0, canvas.width, canvas.height);
 	context.fillRect(position.x, position.y, size.width, size.height);
 	jump();
-
 	position.x += acceleration.x;
+	if(position.x + size.width >= canvas.width) {
+	position.x = canvas.width - size.width;
+	} else if(position.x <= 0) {
+	position.x = 0;
+	}
 
 
 }
