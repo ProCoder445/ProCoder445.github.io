@@ -1,0 +1,29 @@
+commit 2403a2c9101eb979c6a906d8b9ba0287ea785e81
+Author: Caleb <cszachariah@gmail.com>
+Date:   Thu May 1 18:15:02 2025 -0400
+
+    Updated game, fixed jumping
+
+commit 3411cad9899c3b179ffc3b26dfa549dc59e53143
+Author: Caleb <cszachariah@gmail.com>
+Date:   Thu May 1 12:04:45 2025 -0400
+
+    Added some basic left/right controls
+
+commit 9a5341d883cb0a3f11bb7a7412b1c9ab026d4180
+Author: Caleb <cszachariah@gmail.com>
+Date:   Thu May 1 08:06:07 2025 -0400
+
+    Making a simple animation
+
+commit 4fe988b88b31e8c67767ebc910c484e62e5f48ac
+Author: Caleb <cszachariah@gmail.com>
+Date:   Wed Apr 30 17:05:24 2025 -0400
+
+    Starting repo
+
+commit af7683f55b62954fcb0580df21733078fe03ce19
+Author: Caleb <cszachariah@gmail.com>
+Date:   Wed Apr 30 16:52:04 2025 -0400
+
+    Starting to build the Website
