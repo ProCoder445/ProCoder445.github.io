@@ -1,7 +1,4 @@
-const canvas = document.querySelector("canvas");
-canvas.height = window.innerHeight;
-canvas.width = window.innerWidth;
-const context = canvas.getContext("2d");
+import {context} from "./variables.js";
 var size = {
 	width: 100,
 	height: 100
@@ -66,14 +63,15 @@ window.addEventListener("keydown", (event) => {
 		break; 
 	}
 
-	console.log(acceleration);
 });
 
 
 window.addEventListener("keydown", (event) => {
 	switch(event.key) {
 	case "ArrowUp":
-		acceleration.y = -20;
+		if(position.y + size.height >= canvas.height) {
+			acceleration.y = -20;
+		};
 		break;
 
 	}
@@ -96,7 +94,6 @@ window.addEventListener("keyup", (event) => {
 		break; 
 	}
 
-	console.log(acceleration);
 });
 
 
