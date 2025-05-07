@@ -1,4 +1,5 @@
-import {context} from "./variables.js";
+import {context, canvas} from "./variables.js";
+import {EmotionStateObject} from "./emotionState.js";
 var size = {
 	width: 100,
 	height: 100
@@ -20,6 +21,14 @@ var acceleration = {
 
 
 let gravity = 0.5;
+
+function drawSimpleSprite() {
+	let character = new EmotionStateObject(true, "circle", 100, 100, "./Assets/HappySeed.png");
+
+	character.drawImage(30, 30);
+}
+
+
 
 function jump() {
 	
@@ -47,12 +56,14 @@ function animate() {
 	}
 
 
+	drawSimpleSprite();
+
+
 }
 
 
 
 window.addEventListener("keydown", (event) => {
-	console.log(event.key);
 	switch(event.key) {
 	case "ArrowLeft":
 		acceleration.x = -6;
@@ -82,7 +93,6 @@ window.addEventListener("keydown", (event) => {
 
 
 window.addEventListener("keyup", (event) => {
-	console.log(event.key);
 	switch(event.key) {
 
 	case "ArrowLeft":

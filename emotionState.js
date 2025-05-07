@@ -1,7 +1,7 @@
-import {context} from "./variables.js"
+import {context} from "./variables.js";
 
 
-export default class EmotionStateObject {
+export class EmotionStateObject {
 
 	constructor(isHappy, hitboxShape, hitboxWidth, hitboxHeight, image) {
 		this.happy = isHappy;
@@ -14,10 +14,10 @@ export default class EmotionStateObject {
 			};
 		}
 
-	displayImage(positionX, positionY) {
+	drawImage(positionX, positionY) {
 		this.image = new Image();
 		this.image.src = this.sprite;
-		
+		context.drawImage(this.image, positionX, positionY);
 
 	}
 
